@@ -1,0 +1,185 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #17181F;
+  color: #ddd;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #2C2F36;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Main Container */
+main {
+  max-width: 360px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #2C2F36;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #ddd;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+form input {
+  width: 100%;
+  background-color: transparent;
+  color: #ddd;
+  border: 2px solid #30313d;
+  padding: 10px;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4b4b4b;
+  background-color: #30313d;
+  outline: none;
+}
+
+form div.basic {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+form button {
+  width: 100%;
+  margin-top: 10px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Transactions Section */
+div.transactions {
+  margin-top: 20px;
+}
+
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid #30313d;
+  transition: background-color 0.3s ease;
+}
+
+div.transaction:nth-child(odd) {
+  background-color: #2C2F36;
+}
+
+div.transaction:hover {
+  background-color: #3a3e46;
+}
+
+div.transaction div.name {
+  font-size: 1.2rem;
+}
+
+div.transaction div.description {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+div.right {
+  text-align: right;
+}
+
+div.price-green {
+  color: #1c1;
+}
+
+div.price-red {
+  color: #c11;
+}
+
+div.transaction div.datetime {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  main {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  form div.basic {
+    flex-direction: column;
+  }
+
+  form input {
+    margin-bottom: 10px;
+  }
+
+  div.transaction {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
